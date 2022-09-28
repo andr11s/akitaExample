@@ -1,0 +1,20 @@
+<div class="container__products">
+  <div class="product-card" *ngFor="let item of products">
+    <div class="badge">Hot</div>
+    <div class="product-tumb">
+      <img [src]="item.image" alt="">
+    </div>
+    <div class="product-details">
+      <span class="product-catagory">{{item.title}}</span>
+      <h4><a href="">Women leather bag</a></h4>
+      <p>{{item.description}}</p>
+      <div class="product-bottom-details">
+        <div class="product-price"> ${{item.price}}</div>
+        <div class="product-links">
+          <a href=""><i class="fa fa-heart"></i></a>
+          <a (click)="addCartProducts(item.id)"><i class="fa fa-shopping-cart"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
